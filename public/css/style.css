@@ -1,0 +1,1103 @@
+﻿html {
+	scroll-behavior: smooth;
+}
+
+body{
+	background-color: #03060e;
+	margin: 0;
+}
+
+/****************************************************************/
+/* 						Common Classes 							*/
+/****************************************************************/
+.flex{
+	display: flex;
+}
+
+.spaceAround{
+	justify-content: space-around;
+}
+
+.center{
+	text-align: center;
+}
+
+.lightBlueText{
+	color: #00CBFF;
+}
+
+.darkBlueText{
+	color: #000000;
+}
+
+.whiteText{
+	color: #fff!important;
+}
+
+.grayText{
+	color: #9C9C9C;
+}
+
+.title{
+	font-family: Fira Code;
+	font-size: 30px;
+}
+
+.desc{
+	font-family: Fira Code;
+	font-size: 20px;
+	color: #9C9C9C;
+}
+
+.magenta{
+	color: #9B59B6;
+}
+
+.orange{
+	color: #D35400;
+}
+
+.green{
+	color: #2ECC71;
+}
+
+.op60{
+	opacity: 60%;
+}
+
+.ft16{
+	font-size: 16px;
+}
+/****************************************************************/
+/* 								Main  							*/
+/****************************************************************/
+
+#fullContainer{
+	width: 100%;
+	height: 100vh;
+}
+/****************************************************************/
+/*						Right Content							*/
+/****************************************************************/
+/*						Console 							*/
+#console{
+	width: 90vw;
+	background-color: #010103;
+	margin: 50px auto auto auto;
+	border-radius: 10px;
+	border: 1px rgba(255, 255, 255, 0.5) solid;
+}
+
+/*Title + Icons*/
+#titleContainer{
+	width: 100%; 
+	padding: 5px 0;
+}
+
+#consoleTitle{
+	width: 90%;
+	color: rgb(236, 48, 48);
+	margin-left: 10%;
+	font-family: Fira Code;
+	font-size: 12px;
+}
+
+#consoleIcons{
+	width: 8%;
+	color: #868B96;
+	font-size: 10px;
+	opacity: 30%;
+}
+
+#consoleIcons i{
+	margin-top: auto;
+}
+
+/*Nav*/
+#nav{
+	width: 100%;
+	margin-top: 20px;
+	flex-wrap: wrap;
+}
+
+.navLink{
+	font-family: Fira Code;
+	font-size: 14px;
+	color: rgb(1, 252, 76);
+	text-decoration: none;
+	transition: 0.5s;
+	margin: 0 10px;
+}
+
+.underline{
+	text-decoration: underline;
+}
+
+.navLink:hover{
+	color: #00CBFF;
+	transition: 0.5s;
+}
+
+/*Tab*/
+#tabsContainer{
+	width: 100%;
+	border-bottom: 1px solid rgba(0,0,0,0.8);
+}
+
+#tab{
+	display: inline-block;
+	margin-top: 15px;
+	margin-left: 15px;
+	padding: 10px;	
+	opacity: 50%;
+	font-family: Fira Code;
+	font-size: 12px;
+	border-bottom: 5px solid #2776FB;
+}
+
+/*Typing Text*/
+#typingText{
+	font-family: Fira Code;
+	font-size: 15px;
+	padding: 0 10px 50px 10px;
+	display: flex;
+	height: 400px;
+    overflow-y: scroll;
+}
+#typingText::after {
+	content: '';
+	margin-left: 3px;
+	background-color: #fff;
+	animation: blink 0.5s infinite;
+	height: 28px;
+	width: 5px;
+	margin-top: 10px;
+}
+  /*animation for blink cursor*/
+@keyframes blink {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+/* Custom scrollbar width */
+#typingText::-webkit-scrollbar {
+	width: 8px;
+}
+  
+/* Custom scrollbar Track */
+#typingText::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+/* Custom scrollbar Handle */
+#typingText::-webkit-scrollbar-thumb {
+	background: #868B96;
+	border-radius: 25px;
+}
+
+/*  Custom scrollbarHandle on hover */
+#typingText::-webkit-scrollbar-thumb:hover {
+	background: #ffffff;
+}
+
+
+.whoami{
+	margin-left: 10px;
+}
+
+#typingName{
+	font-size: 38px;
+	font-weight: 600;
+	margin-top: 5px;
+	margin-bottom: 2px;
+}
+
+#typingRole{
+	margin-top: 0;
+	margin-bottom: 25px;
+}
+
+#typingInformations{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.typingRow{
+	width: 30%;
+	text-align: left;
+	margin-top: 15px;
+	margin-right: 15px;
+}
+
+.rowTitle{
+	margin: 5px;
+}
+
+.rowDot{
+	margin: 2px;
+}
+
+.typingLink{
+	color: #3767FF;
+	transition: 0.5s;
+	text-decoration: none;
+}
+
+.typingLink:hover{
+	transition: 0.5s;
+	color: #00CBFF;
+}
+
+/****************************************************************/
+/* 						Changelog   							*/
+/****************************************************************/
+#changelog{
+	width: 90%;
+	margin: 80px auto 0 auto;
+}
+
+#changelogBlock1{
+	margin-top: 50px;
+}
+
+.changelogBlock{
+	display: flex;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.changelogDot{
+	font-size: 24px;
+	margin-right: 10px;
+}
+
+.changelogMonth{
+	font-size: 16px;
+	margin-right: 50px;
+}
+
+
+.changelogDesc{
+	font-size: 16px;
+}
+
+
+/****************************************************************/
+/* 						Experience   							*/
+/****************************************************************/
+#experience{
+	width: 90%;
+	margin: 80px auto 0 auto;
+}
+
+#experienceBlock1{
+	margin-top: 50px;
+}
+
+.experienceBlock{
+	display: flex;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.experienceDot{
+	font-size: 24px;
+	margin-right: 10px;
+}
+
+.experienceMonth{
+	margin-right: 50px;
+}
+
+
+.experienceDesc{
+	font-size: 16px;
+}
+
+/****************************************************************/
+/* 						Projects   							*/
+/****************************************************************/
+.projectsContainer{
+	width: 90%;
+	margin: 130px auto 0 auto;
+}
+
+#projectsFreelance{
+	width: 100%;
+	margin-top: 100px;
+	overflow: hidden;
+	display: flex;
+}
+
+.projectsLeftContainer{
+	width: 40%;
+}
+
+.projectRightContainer{
+	width: 60%;
+}
+
+.projectsIcon{
+	font-size: 50px;
+}
+
+.projectTitleContainer{
+	display: flex;
+	margin-bottom: 50px;
+}
+
+.projectTitle{
+	font-family: Fira Code;
+	font-size: 28px;
+	font-weight: 600;
+	margin: auto 0 0 15px;
+}
+
+.projectBtn{
+	margin: 40px auto;
+	text-align: center;
+}
+
+.projectBtnLink{
+	text-decoration: none;
+	font-family: Fira Code;
+	padding: 8px 20px;
+	border-radius: 5px;
+	transition: 0.5s;
+}
+
+.projectBtnLink:hover{
+	padding: 15px 25px;
+	transition: 0.5s;
+}
+
+.pBBlue{
+	background-color: #00CBFF;
+	color: #000;
+}
+
+#websiteSlider{
+	display: flex;
+	flex-flow: column;
+}
+
+.webSliderImg{
+	width: 90%;
+}
+
+.wSI1{
+	z-index: 5;
+	margin-bottom: -68%;
+	margin-left: 1%;
+}
+
+.wSI2{
+	z-index: 6;
+	margin-bottom: -68%;
+	margin-left: 6%;
+}
+
+.wSI3{
+	z-index: 7;
+	margin-left: 10%;
+}
+
+#projectsKaliNT{
+	width: 100%;
+	margin-top: 100px;
+	overflow: hidden;
+	display: flex;
+}
+
+#kaliNTLogoimg{
+	width: 70%;
+}
+
+#ctfList{
+	margin-top: 20px;
+}
+
+.ctfContainer{
+	display: flex;
+	margin-bottom: 10px;
+}
+.ctfContainer img{
+	width: 25px;
+	margin-right: 5px;
+	margin-bottom: auto;
+}
+
+#kaliNTText{
+	padding-right: 10px;
+}
+
+#projectsAuditPlatform{
+	width: 100%;
+	margin-top: 100px;
+	overflow: hidden;
+	display: flex;
+}
+
+#auditPlatformImgContainer{
+	text-align: center;
+}
+
+#auditPlatformImg{
+	width: 70%;
+}
+
+/****************************************************************/
+/* 			Website slider Animation 							*/
+/****************************************************************/
+/*
+Full animation:
+1) Wait 10 sec
+2) move card 1 to the right (+ invisible)
+3) wait 10 sec
+4) move card 2 to the right (+ invisible)
+5) wait 10 sec
+6) put card 2 back in its place (+ visible)
+7) wait 10 sec
+8) put card 1 back in its place (+ visible)
+9) loop
+*/
+
+@keyframes moveToRightCard{
+	0%{
+		opacity: 100%;
+	}
+
+	80%{
+		opacity: 0%;
+	}
+
+	100%{
+		transform: translate( 300px);
+		opacity: 0%;
+	}
+}
+
+@keyframes resetPosCard{
+	0%{
+		transform: translate( 300px);
+		opacity: 0%;
+	}
+
+	100%{
+		opacity: 100%;
+	}
+}
+
+/****************************************************************/
+/* 						Softs Skills							*/
+/****************************************************************/
+#softsSkills{
+	width: 95%;
+	margin: 80px 0 0 auto;
+	font-family: Fira Code;
+}
+
+#softsSkillsTitle{
+	margin-bottom: 30px;
+}
+
+#softsSkillsCardsContainer{
+	width: 100%;
+	flex-wrap: wrap;
+}
+
+.softSkillContainer{
+	width: 23%;
+	min-width: 250px;
+	max-width: 300px;
+	height: 500px;
+	background: linear-gradient(to bottom, rgba(11,86,99,0.35) 0%, rgba(11,86,99,0.05) 100%);
+	border: 1px solid #0b5663;
+	border-radius: 10px;
+	margin: 10px;
+	transition: 0.3s;
+}
+
+.softSkillContainer:hover{
+	-webkit-box-shadow: 2px 5px 16px 0px #0B325E, 0px 0px 50px 5px rgba(0,203,255,0.35); 
+	box-shadow: 2px 5px 16px 0px #0B325E, 0px 0px 50px 5px rgba(0,203,255,0.35);
+	transition: 0.3s;
+	
+}
+
+.softSkillContainer:hover .softSkillTitle{
+	color: #00CBFF;
+	transition: 0.3s;
+	
+}
+
+.circle{
+	width: 200px;
+	height: 200px;
+	border-radius: 100%;
+	background-color: #040D21;
+	margin: 20px auto;
+}
+
+.softSkillImg{
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+	padding-top: 35px;
+}
+.softSkillImg img{
+	width: 60%;
+}
+
+.softSkillTitle{
+	color: #fff ;
+	font-size: 20px;
+	text-align: center;
+	font-weight: 600;
+	margin-bottom: 40px;
+	transition: 0.3s;
+}
+
+.softSkillDesc{
+	width: Calc(100% - 10px);
+	font-size: 16px;
+	color: #596E83;
+	text-align: center;
+	padding: 5px;
+}
+
+
+/****************************************************************/
+/* 								Skills							*/
+/****************************************************************/
+#compSkills{
+	width: 95%;
+	margin: 80px 0 0 auto;
+	font-family: Fira Code;
+}
+
+#skillsContainer{
+	width: 100%;
+	flex-wrap: wrap;
+	margin-top: 30px;
+}
+
+.skill{
+	width: 130px;
+	height: 130px;
+	text-align: center;
+	padding: 5px;
+	margin: 15px;
+	transition: 0.5s;
+	color: #FFF;
+	background-color: #0c162d;
+    border-radius: 5px;
+    padding: 15px;
+	display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill:hover{
+	color: #00CBFF;
+	transition: 0.5s;
+}
+
+.skill:hover .skillLogo{
+	transform: scale(1.2);
+	transition: 0.5s;
+}
+
+
+.skillLogo{
+	width: 40%;
+	margin-bottom: 15px;
+	transition: 0.5s;
+}
+
+.skillTitle{
+	font-family: Fira Code;
+	font-size: 20px;
+}
+
+/****************************************************************/
+/* 							Testimonials						*/
+/****************************************************************/
+#testimonials{
+	width: 95%;
+	margin: 80px 0 0 auto;
+	font-family: Fira Code;
+}
+
+#testimonialsContainer{
+	width: 80%;
+	height: 400px;
+	margin: 30px auto;
+	background: linear-gradient(to bottom, rgba(11,86,99,0.35) 0%, rgba(11,86,99,0.05) 100%);
+	border: 1px solid #0b5663;
+	border-radius: 10px;
+	position: relative;
+}
+
+.testimonialsText{
+	width: Calc(100% - 20px);
+	height: Calc(80% - 20px);
+	text-align: center;
+	font-size: 18px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	padding: 10px;
+}
+
+.testimonialsText div{
+	margin: auto;
+}
+
+.testimonialsFrom{
+	width: Calc(100% - 20px);
+	height: Calc(20% - 20px);
+	text-align: right;
+	display: flex;
+	align-items: flex-end;
+	padding: 10px;
+	color: #596E83;
+	flex-flow: row-reverse;
+}
+
+.testimonialsFrom img{
+	width: 25px;
+	margin-right: 15px;
+}
+
+#testimonialsLogo{
+	width: 100px;
+	position: absolute;
+	z-index: 5;
+	top: -35px;
+	left: -35px;
+}
+
+.activeTestimonial{
+	width: 100%;
+	height: 100%;
+	display: block!important;
+}
+
+.oneTestimonial{
+	display: none;
+}
+
+@keyframes fadeIn{
+	0% {
+        opacity: 0;
+    }
+
+	100% {
+		opacity: 1;
+	}
+  }
+
+/****************************************************************/
+/* 							footer								*/
+/****************************************************************/
+#footer{
+	width: 100%;
+	height: 200px;
+	position: absolute;
+	left: 0;
+	font-family: Fira Code;
+	background-color: #040c1a;
+	z-index: 1;
+	margin-top: 100px;
+	border-top: 1px solid #00bb19;
+}
+
+#footer .title{
+	margin-left: 100px;
+    margin-top: 35px;
+}
+
+#footerFlex{
+	width: 80%;
+	margin: 0 auto 0 auto;
+}
+
+.footerBtn{
+	margin: auto 0;
+}
+
+#footerContact{
+	margin-left: auto;
+	margin-right: 0%;
+	display: flex;
+	flex-flow: row;
+}
+
+.footerIcons{
+	width: 35px;
+	transition: 0.2s;
+}
+
+.footerIcons:hover{
+	width: 40px;
+	transition: 0.2s;
+}
+
+
+#copyright{
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+	color: #9C9C9C;
+	margin-bottom: 0;
+	margin-top: auto;
+}
+
+/****************************************************************/
+/* 						Media Queries  							*/
+/****************************************************************/
+@media (max-width: 1590px){
+	/*Increase width of typing row after wrap*/
+	.typingRow{
+		width: 48%;
+	}
+}
+
+@media (max-width: 1300px){
+	/*Center website slider*/
+	#websiteSlider{
+		padding-top: 100px;
+	}
+}
+
+@media (max-width: 1200px){
+	/*Center website slider*/
+	#websiteSlider{
+		padding-top: 150px;
+	}
+}
+
+
+@media (max-width: 1050px){
+	/*Increase width of typing row after wrap*/
+	.typingRow{
+		width: 95%;
+		margin-top: 25px;
+		margin-right: 0;
+	}
+
+	/*Add margin to title*/
+	.title{
+		margin-left: 10px;
+	}
+
+	/*Add margin to desc*/
+	.desc{
+		margin-left: 10px;
+	}
+
+	/*Center website slider*/
+	#websiteSlider{
+		padding-top: 200px;
+	}
+}
+
+@media (max-width: 1000px){
+	/*Wrap website slider in projects*/
+	#websiteSlider{
+		width: 80%;
+		margin: 0 auto 30px 0;
+		padding-top: 0;
+	}
+
+	#projectsFreelance{
+		flex-wrap: wrap-reverse;
+	}
+
+	#projectsKaliNT{
+		flex-wrap: wrap;
+	}
+
+	.projectsLeftContainer{
+		width: 100%;
+		text-align: center;
+	}
+
+	.projectsIcon{
+		margin: 0 0 0 auto;
+	}
+
+	.projectTitle{
+		margin: auto auto 0 15px;
+	}
+
+	#kaliNTLogo{
+		margin-bottom: 50px;
+	}
+
+	#kaliNTLogoimg{
+		width: 50%;
+		margin-bottom: 25px;
+	}
+
+	#kaliNTText{
+		width: 100%;
+		text-align: center;
+	}
+
+	#ctfList{
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.ctfContainer{
+		display: inline-block;
+	}
+
+	#projectsAuditPlatform{
+		flex-wrap: wrap-reverse;
+	}
+
+	#auditPlatformImgContainer{
+		width: 100%;
+	}
+}
+
+@media (max-width: 800px){
+	/*Hide 'tab' in changelog*/
+	.changelogIndent{
+		display: none;
+	}
+
+	/*Avoid logo over text*/
+	.testimonialsText{
+		padding-top: 20px;
+    	padding-bottom: 0px;
+	}
+}
+
+@media (max-width: 700px){
+	/*Increase size of console icons*/
+	#consoleIcons{
+		width: 15%;
+	}
+	
+	/*Reduce left margin title in footer*/
+	#footer .title{
+		margin-left: 45px;
+	}
+}
+
+@media (max-width: 565px){
+	/*reduce size of console*/
+	#console{
+		width: 90vw;
+		margin-left: 25px;
+	}
+
+	/*move dot*/
+	.dot{
+		left: 5px;
+	}
+
+	/*Wrap changelog*/
+	.changelogBlock{
+		flex-wrap: wrap;
+		text-align: center;
+	}
+
+	/*Increase changelog desc width*/
+	.changelogDesc{
+		width: 95%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/*margin bottom month*/
+	.changelogMonth{
+		margin-bottom: 10px;
+		margin-right: auto;
+	}
+
+	/*center changelog*/
+	.changelogDot{
+		margin-left: auto;
+	}
+
+	/*Reduce left margin title in footer*/
+	#footer .title{
+		margin-left: 35px;
+	}
+}
+
+@media (max-width: 500px){
+	/*resize testimonials*/
+	#testimonialsContainer{
+		height: 500px;
+	}
+
+	.testimonialsText{
+		height: Calc(85% - 20px);
+	}
+
+	.testimonialsFrom{
+		height: Calc(15% - 20px);
+	}
+}
+
+@media (max-width: 435px){
+	/*resize testimonials*/
+	.testimonialsText{
+		height: Calc(90% - 20px);
+	}
+
+	.testimonialsFrom{
+		height: Calc(10% - 20px);
+	}
+}
+
+
+@media (max-width: 400px) {
+	/*Remove margin and center console */
+	#console{
+		margin: 50px auto;
+		width: 95%;
+	}
+
+	/*reduce size of Text*/
+	#typingText{
+		font-size: 12px;
+	}
+
+	.typingRow{
+		min-width: initial;
+	}
+
+	#consoleTitle{
+		font-size: 10px;
+	}
+
+	/*Add space to navbar */
+	#nav{
+		justify-content: space-around;
+	}
+
+	/*Reduce font size of desc */
+	.desc{
+		font-size: 16px;
+		margin-left: 0;
+	}
+
+	/*Reduce font size of changelogDot */
+	.changelogDot{
+		font-size: 20px;
+	}
+
+	/*Remove left margin of projects and align all sections*/
+	#changelog{
+		width: 95%;
+		margin: 80px auto 0 auto;
+	}
+
+	.projectsContainer{
+		margin: 130px auto 0 auto;
+	}
+
+	#softsSkills{
+		margin: 80px auto 0 auto;
+	}
+
+	#compSkills{
+		margin: 80px auto 0 auto;
+	}
+
+	#testimonials{
+		margin: 80px auto 0 auto ;
+	}
+
+	/*resize testimonials*/
+	.testimonialsText{
+		font-size: 16px;
+		height: Calc(85% - 20px);
+	}
+
+	.testimonialsFrom{
+		height: Calc(15% - 20px);
+	}
+
+	/*resize testimonials flag*/
+	.testimonialsFrom div{
+		font-size: 14px;
+	}
+
+	/*Reduce left margin title in footer*/
+	#footer .title{
+		margin-left: 25px;
+	}
+
+	/*Footer adjustements*/
+	#footer .title{
+		font-size: 20px;
+	}
+
+	#footerFlex{
+		display: block;
+		text-align: center;
+		margin-top: 35px;
+	}
+	
+	.footerBtn{
+		font-size: 14px;
+	}
+
+	.footerIcons{
+		width: 30px;
+	}
+
+	.footerIcons:hover{
+		width: 35px;
+		transition: 0.2s;
+	}
+
+	#footerContact{
+		flex-flow: row;
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+
+	#footerContact a{
+		margin-top: 15px;
+	}
+
+	#fI1{
+		margin-left: auto;
+		margin-right: 7.5px;
+	}
+
+	#fI2{
+		margin-left: 7.5px;
+	}
+	
+	#fI3{
+		margin-right: auto;
+		margin-left: 7.5px;
+	}
+
+	#copyright{
+		font-size: 10px;
+	}
+}
+
+
+
+
